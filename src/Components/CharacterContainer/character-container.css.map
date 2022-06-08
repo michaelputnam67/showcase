@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "CharacterContainer.scss"
+        "character-container.scss"
     ],
     "names": [],
-    "file": "CharacterContainer.css"
+    "file": "character-container.css"
 }
