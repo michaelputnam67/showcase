@@ -1,5 +1,6 @@
 import Form from "../Form/Form";
 import CharacterContainer from "../CharacterContainer/CharacterContainer";
+import './characters-screen.scss';
 
 export default function CharactersScreen() {
   return (

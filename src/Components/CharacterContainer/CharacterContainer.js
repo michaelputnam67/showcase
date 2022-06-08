@@ -1,4 +1,3 @@
-
 import './character-container.scss';
 
 export default function CharacterContainer () {

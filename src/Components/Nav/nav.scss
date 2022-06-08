@@ -1,25 +1,27 @@
-@import '../../app-styles/mixins.scss';
+@import "../../app-styles/mixins.scss";
 
 nav {
-	@include gridSetup;
-	height: 10vh;
-	border-bottom: black solid 2px;
-	grid-column: span 12;
-	img {
-		grid-column-start: 2;
-		place-self: center;
-		height: 90px;
-		width: 90px;
-	}
-	.buttonContainer {
-		height: 100%;
-		grid-column: 8 / span 4;
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-		button {
-			width: 7em;
-			height: 2em;
-		}
-	}
+  @include gridSetup;
+  height: 10vh;
+  border-bottom: black solid 2px;
+  grid-column: span 12;
+  .burger {
+    grid-column-start: 2;
+    place-self: center;
+    img {
+      height: 90px;
+      width: 90px;
+    }
+  }
+  .buttonContainer {
+    height: 100%;
+    grid-column: 8 / span 4;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    button {
+      width: 7em;
+      height: 2em;
+    }
+  }
 }
