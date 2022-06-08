@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAEA,AAAA,IAAI,CAAC;EACJ,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,KAAK;ECHb,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,GAAG,CAAC,eAAe,CAAC,GAAG;CDI9C",
     "sources": [
-        "App.scss"
+        "App.scss",
+        "mixins.scss"
     ],
     "names": [],
     "file": "App.css"

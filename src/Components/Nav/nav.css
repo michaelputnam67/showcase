@@ -1,1 +1,38 @@
-/* No CSS *//*# sourceMappingURL=nav.css.map */
+nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr (1fr)[10] 2fr;
+      grid-template-columns: 2fr repeat(10, 1fr) 2fr;
+  height: 10vh;
+  border-bottom: black solid 2px;
+  grid-column: span 12;
+}
+
+nav img {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  place-self: center;
+  height: 90px;
+  width: 90px;
+}
+
+nav .buttonContainer {
+  height: 100%;
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 4;
+  grid-column: 8 / span 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .buttonContainer button {
+  width: 7em;
+  height: 2em;
+}
+/*# sourceMappingURL=nav.css.map */
