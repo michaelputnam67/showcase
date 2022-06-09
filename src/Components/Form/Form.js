@@ -2,10 +2,17 @@ import "./form.scss";
 import React from "react";
 
 export default function Form({
+  age, 
+  setAge,
+  actor,
+  setActor,
+  actors,
+  occupation,
+  setOccupation,
+  occupations,
   styles,
   setCurrentStyle,
   currentStyle,
-  name,
   setName,
   episodes,
   setCurrentEpisode,
@@ -14,6 +21,18 @@ export default function Form({
   const hairStyleOptions = styles.map((style) => (
     <option key={Math.random() * 100} value={style}>
       {style}
+    </option>
+  ));
+
+  const possibleOccupations = occupations.map((occupation) => (
+    <option key={Math.random() * 100} value={occupation}>
+      {occupation}
+    </option>
+  ));
+
+  const voiceActors = actors.map((actor) => (
+    <option value={actor} key={Math.random() * 100} name={actor}>
+      {actor}
     </option>
   ));
 
@@ -54,13 +73,23 @@ export default function Form({
   return (
     <form>
       <input
+        className="input-text"
         type="text"
         onChange={(e) => setName(e.target.value)}
         placeholder="Name"
         name="name"
       ></input>
-      <input placeholder="age" type="text" name="age"></input>
+
+      <input
+        value={age ? age : ''}
+        onChange={(e) => setAge(e.target.value)}
+        placeholder="Age"
+        type="number"
+        name="age"
+      ></input>
+
       <select
+        className="input-text"
         value={currentEpisode ? currentEpisode : ""}
         placeholder="First Episode Apeared"
         type="text"
@@ -68,21 +97,34 @@ export default function Form({
         onChange={(e) => setCurrentEpisode(e.target.value)}
       >
         {seasonAndEpisodeOptions()}
-        <option value="" >
-          Episode First Appeared
-        </option>
+        <option value="">Episode First Appeared</option>
       </select>
-      <input type="text" name="voiced by" placeholder="Voice By"></input>
-      <input type="text" placeholder="occupation" name="occupation"></input>
+      <select
+        value={actor ? actor : ""}
+        type="text"
+        onChange={(e) => setActor(e.target.value)}
+      >
+        <option value="">Voice Actor</option>
+        {voiceActors}
+      </select>
+
+      <select
+        value={occupation ? occupation : ""}
+        type="text"
+        onChange={(e) => setOccupation(e.target.value)}
+        placeholder="occupation"
+        name="occupation"
+      >
+        <option value="">Occupation</option>
+        {possibleOccupations}
+      </select>
       <select
         value={currentStyle ? currentStyle : ""}
         size="multiple"
         name="hair styles"
         onChange={(e) => setCurrentStyle(e.target.value)}
       >
-        <option value="">
-          Hair Styles
-        </option>
+        <option value="">Hair Styles</option>
         {hairStyleOptions}
       </select>
     </form>
