@@ -1,0 +1,26 @@
+.character {
+	border-radius: 10px;
+	box-shadow: 3px 3px 8px rgb(89, 89, 89);
+	display: grid;
+	grid-template-columns: 200px minmax(100px, 200px);
+	grid-template-rows: .2fr 1fr;
+	img {
+		grid-column: 1;
+		grid-row: 1 / span 2;
+		max-height: 170px;
+		max-width: 170px;
+		place-self: center;
+		border-radius: 5px;
+	}
+	h2 {
+		text-align: right;
+	}
+	div {
+		grid-column: 2;
+		text-align: right;
+		p{
+			place-self: right;
+		}
+	}
+
+}

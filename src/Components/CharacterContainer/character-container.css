@@ -1,1 +1,13 @@
-/* No CSS *//*# sourceMappingURL=character-container.css.map */
+.characters-container {
+  width: 60em;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 8;
+  grid-column: 4 / span 8;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  row-gap: 30px;
+}
+/*# sourceMappingURL=character-container.css.map */

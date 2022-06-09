@@ -1,1 +1,38 @@
-/* No CSS *//*# sourceMappingURL=form.css.map */
+form {
+  height: 65vh;
+  width: 25em;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / span 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+form select {
+  place-self: center;
+  height: 3.75em;
+  width: 87%;
+  border-radius: 5px;
+  border: none;
+  -webkit-box-shadow: 2px 2px 7px #595959;
+          box-shadow: 2px 2px 7px #595959;
+}
+
+form input {
+  -webkit-box-shadow: 1px 1px 3px #595959;
+          box-shadow: 1px 1px 3px #595959;
+  place-self: center;
+  border-radius: 5px;
+  border: none;
+  height: 3em;
+  width: 85%;
+}
+/*# sourceMappingURL=form.css.map */

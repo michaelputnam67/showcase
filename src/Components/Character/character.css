@@ -1,1 +1,38 @@
-/* No CSS *//*# sourceMappingURL=character.css.map */
+.character {
+  border-radius: 10px;
+  -webkit-box-shadow: 3px 3px 8px #595959;
+          box-shadow: 3px 3px 8px #595959;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 200px minmax(100px, 200px);
+      grid-template-columns: 200px minmax(100px, 200px);
+  -ms-grid-rows: .2fr 1fr;
+      grid-template-rows: .2fr 1fr;
+}
+
+.character img {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / span 2;
+  max-height: 170px;
+  max-width: 170px;
+  place-self: center;
+  border-radius: 5px;
+}
+
+.character h2 {
+  text-align: right;
+}
+
+.character div {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  text-align: right;
+}
+
+.character div p {
+  place-self: right;
+}
+/*# sourceMappingURL=character.css.map */
