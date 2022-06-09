@@ -1,0 +1,14 @@
+@import '../../app-styles/mixins.scss';
+
+.component-container {
+	height: 90vh;
+	grid-column: 2 / span 10;
+	display: grid;
+	grid-gap: 20px;
+	width: 100%;
+	h1 {
+		height: 1vh;
+		grid-column: 2 / span 10;
+		place-self: center;
+	}
+}

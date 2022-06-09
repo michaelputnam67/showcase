@@ -1,0 +1,19 @@
+.component-container {
+  height: 90vh;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 10;
+  grid-column: 2 / span 10;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  width: 100%;
+}
+
+.component-container h1 {
+  height: 1vh;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 10;
+  grid-column: 2 / span 10;
+  place-self: center;
+}
+/*# sourceMappingURL=characters-screen.css.map */

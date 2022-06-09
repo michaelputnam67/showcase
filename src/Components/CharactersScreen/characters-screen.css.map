@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,oBAAoB,CAAC;EACpB,MAAM,EAAE,IAAI;EACZ,WAAW,EAAE,WAAW;EACxB,OAAO,EAAE,IAAI;EACb,QAAQ,EAAE,IAAI;EACd,KAAK,EAAE,IAAI;CAMX;;AAXD,AAMC,oBANmB,CAMnB,EAAE,CAAC;EACF,MAAM,EAAE,GAAG;EACX,WAAW,EAAE,WAAW;EACxB,UAAU,EAAE,MAAM;CAClB",
+    "sources": [
+        "characters-screen.scss",
+        "../../app-styles/mixins.scss"
+    ],
+    "names": [],
+    "file": "characters-screen.css"
+}

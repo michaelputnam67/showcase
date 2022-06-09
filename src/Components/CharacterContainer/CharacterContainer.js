@@ -1,9 +1,16 @@
 import './character-container.scss';
+import Character from '../Character/Character';
 
-export default function CharacterContainer () {
+export default function CharacterContainer ({characters}) {
+	const renderCharacters = characters.map((character) => {
+			return (
+				<Character key={character.id} character={character} />
+			)
+		})
+	
 	return (
-		<section>
-			<h2>Characters</h2>
+		<section className={'characters-container'}>
+			{renderCharacters}
 		</section>
 	)
 }

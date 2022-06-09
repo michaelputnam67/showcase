@@ -1,4 +1,4 @@
 @mixin gridSetup() {
 	display: grid;
-	grid-template-columns: 2fr repeat(10, 1fr) 2fr
+	grid-template-columns: repeat(12, 1fr)
 }

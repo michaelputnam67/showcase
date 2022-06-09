@@ -15,8 +15,8 @@ nav .burger {
 }
 
 nav .burger img {
-  height: 90px;
-  width: 90px;
+  height: 5em;
+  width: 5em;
 }
 
 nav .buttonContainer {
@@ -36,7 +36,7 @@ nav .buttonContainer {
 }
 
 nav .buttonContainer button {
-  width: 7em;
+  width: 6em;
   height: 2em;
 }
 /*# sourceMappingURL=nav.css.map */

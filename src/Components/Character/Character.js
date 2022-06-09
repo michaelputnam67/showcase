@@ -1,9 +1,14 @@
-import './character.scss'
+import "./character.scss";
 
-export default function Character () {
-	return (
-		<section>
-			<h2>Character</h2>
-		</section>
-	)
-};
+export default function Character({ character }) {
+  return (
+    <section className="character" id={character.id}>
+      <h2>{character.name}</h2>
+      <div>
+        <p>{character.voicedBy}</p>
+        <p>{character.firstEpisode}</p>
+      </div>
+      <img src={character.image}></img>
+    </section>
+  );
+}
