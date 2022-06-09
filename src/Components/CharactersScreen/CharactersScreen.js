@@ -9,6 +9,8 @@ export default function CharactersScreen() {
   const [renderedCharacters, setRenderedCharacters] = useState()
   const [hairColors, setHairColors] = useState([])
   const[currentStyle, setCurrentStyle] = useState()
+  const [name, setName] = useState()
+  const [episode, setEpisode] = useState();
 
   const getHairStyles = (data) => {
     let possibleHairColors = data.reduce((acc, character) => {
@@ -21,11 +23,24 @@ export default function CharactersScreen() {
   }
 
   const filterCharacters = () => {
+    let output = characters
     if(currentStyle) {
-      return characters.filter(character => character.hairColor === currentStyle)
-    } else {
-      return characters
+      output = output.filter(character => character.hairColor === currentStyle)
+    } 
+
+    if(name) {
+      output = output.filter(character => {
+        let filter = true
+        name.toLowerCase().split('').forEach((i) => {
+          if(!character.name.toLowerCase().split('').includes(i)) {
+            filter = false
+          }
+        })
+        return filter
+      }) 
     }
+
+    return output
   }
 
   useEffect(() => {
@@ -39,12 +54,12 @@ export default function CharactersScreen() {
 
   useEffect(() => {
     setRenderedCharacters(filterCharacters())
-  }, [characters, currentStyle])
+  }, [characters, currentStyle, name])
 
   return (
     <section className={'component-container'} >
       <h1>Characters</h1>
-      <Form setCurrentStyle={setCurrentStyle} styles={hairColors} />
+      <Form setName={setName} currentStyle={currentStyle} setCurrentStyle={setCurrentStyle} styles={hairColors} />
       {renderedCharacters && <CharacterContainer characters={renderedCharacters}/>}
     </section>
   );
