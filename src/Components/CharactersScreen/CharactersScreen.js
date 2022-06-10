@@ -95,12 +95,11 @@ export default function CharactersScreen() {
 
     if (name) {
       output = output.filter((character) => {
+        let chars = character.name.toLowerCase().split("")
+        let inputName = name.toLowerCase().split("")
         let filter = true;
-        name
-          .toLowerCase()
-          .split("")
-          .forEach((i) => {
-            if (!character.name.toLowerCase().split("").includes(i)) {
+        inputName.forEach((i) => {
+            if (!chars.includes(i) ) {
               filter = false;
             }
           });
