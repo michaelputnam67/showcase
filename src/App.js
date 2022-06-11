@@ -1,11 +1,10 @@
-import './app-styles/App.scss';
-import { Routes, Route, Link } from 'react-router-dom';
-import Nav from './components/Nav/Nav';
-import Home from './components/Home/Home';
-import About from './components/About/About';
-import CharactersScreen from './components/CharactersScreen/CharactersScreen';
-import Character from './components/Character/Character';
-
+import "./app-styles/App.scss";
+import { Routes, Route } from "react-router-dom";
+import Nav from "./components/Nav/Nav";
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
+import CharactersScreen from "./components/CharactersScreen/CharactersScreen";
+import CharacterStats from "./components/CharacterStats/CharacterStats";
 
 function App() {
   return (
@@ -15,7 +14,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/characters" element={<CharactersScreen />} />
-        <Route path={`/character/id`} element={<Character />} />
+        <Route
+          exact path="/character/:id"
+          element={<CharacterStats />}
+        />
       </Routes>
     </main>
   );

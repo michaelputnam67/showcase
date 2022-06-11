@@ -1,6 +1,9 @@
 @import '../../app-styles/mixins.scss';
 
 .component-container {
+	margin-top: 10vh;
+	background-image: url("../../assets/bobs-burger-storefront.png");
+	background-size: cover;
 	height: 90vh;
 	grid-column: 2 / span 10;
 	display: grid;

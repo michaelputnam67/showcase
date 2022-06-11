@@ -1,8 +1,12 @@
 @import "../../app-styles/mixins.scss";
 
 nav {
+  background-color: #FEB15B; 
+  position: fixed;
+  z-index: 100;
   @include gridSetup;
   height: 10vh;
+  width: 100vw;
   border-bottom: black solid 2px;
   grid-column: span 12;
   .burger {
