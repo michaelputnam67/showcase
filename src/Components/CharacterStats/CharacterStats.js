@@ -36,7 +36,7 @@ export default function CharacterStats() {
           <ul>
             <li>
               <a href={character.wikiUrl}>{`${character.name} Wiki Page`}</a>
-							<button>Favorite This Character</button><br></br>
+							<button onClick={() => apiCalls.postCharacter(character)}>Favorite This Character</button><br></br>
             </li>
           </ul>
         </div>
