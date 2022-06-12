@@ -15,7 +15,7 @@ const apiCalls = {
       .then((res) => res.json())
       .catch((err) => alert(err)),
   postCharacter: (post) =>
-    fetch("http://localhost:3001/api/v1/characters", {
+    fetch("https://showcase-api-bobs-burgers.herokuapp.com/api/v1/characters", {
       method: "POST",
       headers: myHeaders,
       body: JSON.stringify(post),
@@ -29,10 +29,11 @@ const apiCalls = {
       })
       .catch((err) => alert(err)),
   getFavoriteCharacters: () =>
-    fetch("http://localhost:3001/api/v1/characters")
+    fetch("https://showcase-api-bobs-burgers.herokuapp.com/api/v1/characters")
       .then((res) => res.json())
       .catch((err) => alert(err)),
-  removeFavoriteCharacter: (id) => fetch("http://localhost:3001/api/v1/characters", {
+  removeFavoriteCharacter: (id) =>
+    fetch("https://showcase-api-bobs-burgers.herokuapp.com/api/v1/characters", {
       method: "DELETE",
       headers: myHeaders,
       body: JSON.stringify(id),
