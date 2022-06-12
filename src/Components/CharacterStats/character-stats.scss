@@ -14,6 +14,8 @@
 			place-self: center;
 			display: grid;
 			img {
+				max-height: 300px;
+				max-width: 200px;
 				transform: scale(1.2, 1);
 				place-self: center;
 				border-radius: 300px;

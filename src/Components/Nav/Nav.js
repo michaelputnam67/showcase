@@ -1,23 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./nav.scss";
 
 export default function Nav() {
   return (
     <nav>
-      <Link className="burger" to="/">
+      <NavLink className="burger" to="/">
         <img src={require("../../assets/burger.png")} />
-      </Link>
+      </NavLink>
       <div className="buttonContainer">
-        <Link to="/">
+        <NavLink to="/">
           <button>Home</button>
-        </Link>
-        <Link to="/about">
-          <button>About</button>
-        </Link>
-        <Link to="/characters">
+        </NavLink>
+        <NavLink to="/characters">
           <button>Characters</button>
-        </Link>
+        </NavLink>
       </div>
     </nav>
   );
