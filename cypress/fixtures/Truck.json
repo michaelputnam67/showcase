@@ -1,0 +1,8 @@
+{
+  "id": 1,
+  "name": "Rat's all Folks! EXTERMINATORS",
+  "image": "https://bobsburgers-api.herokuapp.com/images/pestControlTruck/1.jpg",
+  "season": 1,
+  "episode": "https://bobsburgers-api.herokuapp.com/episodes/1",
+  "url": "https://bobsburgers-api.herokuapp.com/pestControlTruck/1"
+}

@@ -37,13 +37,11 @@ export default function CharacterStats() {
 
   return (
     <div className="character-stats-container">
-      <section className="character-image-container">
+      <section className="character-info-container">
         <h1>{character ? character.name : "character"}</h1>
         <div className="image-container">
           <img src={character.image} alt={character.name} />
         </div>
-      </section>
-      <section className="character-info-container">
         <div className="character-info-container-1">
           <ul>
             <li>{character && character.gender}</li>
@@ -59,6 +57,7 @@ export default function CharacterStats() {
               <a href={character.wikiUrl}>{`${character.name} Wiki Page`}</a>
               {favorited ? (
                 <button
+                  className='remove-favorite'
                   onClick={() =>
                     apiCalls.removeFavoriteCharacter({ id: id }).then((res) => {
                       if (Number(res.id) === Number(id)) {
@@ -70,7 +69,8 @@ export default function CharacterStats() {
                   Remove from Favorites
                 </button>
               ) : (
-                <button
+                <button 
+                  className="favorite"
                   onClick={() =>
                     apiCalls.postCharacter(character).then((res) => {
                       if (res.id === Number(id)) {

@@ -10,10 +10,10 @@ export default function Nav() {
       </NavLink>
       <div className="buttonContainer">
         <NavLink to="/">
-          <button>Home</button>
+          <button className={'home-button'}>Home</button>
         </NavLink>
         <NavLink to="/characters">
-          <button>Characters</button>
+          <button className={'characters-button'}>Characters</button>
         </NavLink>
       </div>
     </nav>

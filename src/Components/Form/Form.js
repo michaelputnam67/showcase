@@ -91,8 +91,6 @@ export default function Form({
       <select
         className="input-text"
         value={currentEpisode ? currentEpisode : ""}
-        placeholder="First Episode Apeared"
-        type="text"
         name="first episode"
         onChange={(e) => setCurrentEpisode(e.target.value)}
       >
@@ -101,7 +99,7 @@ export default function Form({
       </select>
       <select
         value={actor ? actor : ""}
-        type="text"
+        name="voice actor"
         onChange={(e) => setActor(e.target.value)}
       >
         <option value="">Voice Actor</option>
@@ -110,9 +108,7 @@ export default function Form({
 
       <select
         value={occupation ? occupation : ""}
-        type="text"
         onChange={(e) => setOccupation(e.target.value)}
-        placeholder="occupation"
         name="occupation"
       >
         <option value="">Occupation</option>
