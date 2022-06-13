@@ -1,4 +1,7 @@
 .component-container {
+  margin-top: 10vh;
+  background-image: url("../../assets/bobs-burger-storefront.png");
+  background-size: cover;
   height: 90vh;
   -ms-grid-column: 2;
   -ms-grid-column-span: 10;

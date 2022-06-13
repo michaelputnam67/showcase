@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c0d6bec7.css",
+    "main.js": "/static/js/main.51b5d25b.js",
+    "static/media/bobs-burger-storefront.png": "/static/media/bobs-burger-storefront.87223ae0e31fef48e9db.png",
+    "static/media/diner-background.png": "/static/media/diner-background.6fdaaafcc19ca297a297.png",
+    "static/media/burger.png": "/static/media/burger.e1989162661a99327697.png",
+    "index.html": "/index.html",
+    "main.c0d6bec7.css.map": "/static/css/main.c0d6bec7.css.map",
+    "main.51b5d25b.js.map": "/static/js/main.51b5d25b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c0d6bec7.css",
+    "static/js/main.51b5d25b.js"
+  ]
+}

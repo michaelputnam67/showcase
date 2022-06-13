@@ -1,9 +1,13 @@
 nav {
+  background-color: #FEB15B;
+  position: fixed;
+  z-index: 100;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr (1fr)[10] 2fr;
-      grid-template-columns: 2fr repeat(10, 1fr) 2fr;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
   height: 10vh;
+  width: 100vw;
   border-bottom: black solid 2px;
   grid-column: span 12;
 }

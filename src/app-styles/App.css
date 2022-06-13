@@ -3,7 +3,7 @@ main {
   height: 100vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr (1fr)[10] 2fr;
-      grid-template-columns: 2fr repeat(10, 1fr) 2fr;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
 }
 /*# sourceMappingURL=App.css.map */
