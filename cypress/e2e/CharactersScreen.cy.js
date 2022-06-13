@@ -1,13 +1,15 @@
 describe("CharactersScreen.cy.js", () => {
   beforeEach(() => {
+    cy.intercept("GET", "https://bobsburgers-api.herokuapp.com/pestControlTruck/*", {fixture: "Truck"})
     cy.intercept("GET", "https://bobsburgers-api.herokuapp.com/characters/", {
       fixture: "Characters",
     });
     cy.intercept("GET", "https://bobsburgers-api.herokuapp.com/episodes/", {
       fixture: "Episodes",
     });
+    cy.intercept("GET", "https://showcase-api-bobs-burgers.herokuapp.com/api/v1/characters", {fixture: "FavoriteCharacters" })
     cy.visit("http://localhost:3000");
-    cy.get("button").eq(1).click();
+    cy.get(".characters-button").click();
   });
   it("As a user I should be able navigate to a characters screen and see a list of characters ", () => {
     cy.get("h2").eq(0).should("have.text", '"Dottie Minerva"');

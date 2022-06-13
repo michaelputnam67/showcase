@@ -32,8 +32,7 @@ const apiCalls = {
     fetch("https://showcase-api-bobs-burgers.herokuapp.com/api/v1/characters")
       .then((res) => res.json())
       .catch((err) => alert(err)),
-  removeFavoriteCharacter: (id) =>
-    fetch("https://showcase-api-bobs-burgers.herokuapp.com/api/v1/characters", {
+  removeFavoriteCharacter: (id) => fetch("https://showcase-api-bobs-burgers.herokuapp.com/api/v1/characters", {
       method: "DELETE",
       headers: myHeaders,
       body: JSON.stringify(id),

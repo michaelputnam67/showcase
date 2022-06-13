@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# ShowCase (Bob's Burgers)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview:
 
-## Available Scripts
+Bob's Burger Auditorium is a one stop shop for every Bob's Burger the animated sitcoms vast roster of characters. Users can view every Bob's burger character by a variety of methods, view more details about their character and add the viewed character to a list of favorite characters that will display on the homepage. The user can also go back to the viewed character and remove them from their saved list. 
 
-In the project directory, you can run:
+[Check out the deployed app here]()
 
-### `npm start`
+[Original project spec can be found here](https://xd.adobe.com/view/9b29b218-d9e7-45e1-a65a-cb60005195d8-ce7a/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[Project planning documents can be found here](https://xd.adobe.com/view/39e8e747-c133-4067-80a9-44808f3b8027-6cbb/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Application in Action:
 
-### `npm test`
+Home page:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![home page](https://media.giphy.com/media/gIxvDMoJAIfpGEqMRL/giphy.gif)
 
-### `npm run build`
+About screen:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![About screen](https://media.giphy.com/media/kWFh3iPyYeJoZGKXWS/giphy.gif)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Projects screen and adding a projects:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Projects Screen and adding a projects](https://media.giphy.com/media/Ywerw5wjGN9aOYQK5N/giphy.gif)
 
-### `npm run eject`
+Timer screen and taking a break:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![Timer screen and taking a break](https://media.giphy.com/media/ZhTHbhwjDhxAhFF8dQ/giphy.gif)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Stats screen:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Stats screen](https://media.giphy.com/media/2DmhnKhv3G9yekyfct/giphy.gif)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Profile screen:
 
-## Learn More
+![Profile Screen](https://media.giphy.com/media/wmm7jREApFfhLmjJQh/giphy.gif)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Deploy Link:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+Bob's Burgers API/Backend: https://showcase-api-bobs-burgers.herokuapp.com
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Goals:
 
-### Analyzing the Bundle Size
+- Showcase the skills I have developed over the course of my time at Turing.
+- Build a basic react app that utilizes two apis one previous existing and one built for myself. 
+- 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Technologies:
 
-### Making a Progressive Web App
+- React
+- Cypress
+- Git/GitHub
+- Heroku CLI
+- GitHub Pages
+- Javascript
+- React Router
+- Restful APIs
+- Adobe XD
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## Future Additions:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Map of characters related to the current character. 
+- An about page with information about bobs burgers
+- more tibits from the show
+- The ability to create your own fictional character avatar.
 
-### Deployment
+## Contributor:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- [Michael Putnam](https://github.com/michaelputnam67)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
