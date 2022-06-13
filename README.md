@@ -4,7 +4,7 @@
 
 Bob's Burger Auditorium is a one stop shop for every Bob's Burger the animated sitcoms vast roster of characters. Users can view every Bob's burger character by a variety of methods, view more details about their character and add the viewed character to a list of favorite characters that will display on the homepage. The user can also go back to the viewed character and remove them from their saved list. 
 
-[Check out the deployed app here]()
+
 
 
 [Project planning documents can be found here](https://xd.adobe.com/view/39e8e747-c133-4067-80a9-44808f3b8027-6cbb/)
@@ -12,12 +12,17 @@ Bob's Burger Auditorium is a one stop shop for every Bob's Burger the animated s
 ## Application in Action:
 
 Home page:
+![Home Page](https://user-images.githubusercontent.com/91028440/173402651-473588ff-252d-40fa-9df8-4bed5b683a24.png)
 
+Character Screen: 
+![Character Screen](https://user-images.githubusercontent.com/91028440/173402316-d6df3f1b-aeb6-439c-8e72-03d72abfe34e.png)
 
-About screen:
+Characters Screen:
+![All Characters Screen](https://user-images.githubusercontent.com/91028440/173402536-708ad7b3-d98f-4f5e-857a-6d66f34f71a1.png)
+
 
 ## Deploy Link:
-
+[Check out the deployed app here](https://michaelputnam67.github.io/showcase)
 
 Bob's Burgers API/Backend: https://showcase-api-bobs-burgers.herokuapp.com
 
