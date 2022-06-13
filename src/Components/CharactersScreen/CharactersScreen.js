@@ -48,90 +48,7 @@ export default function CharactersScreen() {
     setHairColors(possibleHairColors);
   };
 
-  const filterCharacters = () => {
-    let output = characters;
-    if (currentStyle) {
-      output = output.filter(
-        (character) => character.hairColor === currentStyle
-      );
-    }
-
-    if (age) {
-      output = output.filter((character) => {
-        if (!character.age) {
-          return false;
-        }
-        let charAge = character.age
-          .split("")
-          .filter((x) => x !== "s")
-          .join("")
-          .split("-")
-          .filter((x) => !isNaN(x));
-
-        if (charAge.length > 1) {
-          if (
-            Number(charAge[0]) > Number(age) ||
-            Number(charAge[1]) < Number(age)
-          ) {
-            return false;
-          } else {
-            return true;
-          }
-        }
-        return Number(charAge[0]) === Number(age);
-      });
-    }
-    if (actor) {
-      output = output.filter((character) => {
-        return character.voicedBy === actor;
-      });
-    }
-
-    if (occupation) {
-      output = output.filter((character) => {
-        return character.occupation === occupation;
-      });
-    }
-
-    if (name) {
-      output = output.filter((character) => {
-        let chars = character.name.toLowerCase().split("")
-        let inputName = name.toLowerCase().split("")
-        let filter = true;
-        inputName.forEach((i) => {
-            if (!chars.includes(i) ) {
-              filter = false;
-            }
-          });
-        return filter;
-      });
-    }
-
-    if (currentEpisode) {
-      output = output.filter((character) => {
-        if (!character.firstEpisode) {
-          return false;
-        }
-
-        return (
-          character.firstEpisode
-            .split("")
-            .filter((x) => x !== '"')
-            .join("") ===
-          currentEpisode
-            .split('" ')
-            .filter((x) => !x.includes("("))
-            .filter((x) => !x.includes(")"))
-            .join("")
-            .split("")
-            .filter((x) => x !== `"`)
-            .join("")
-        );
-      });
-    }
-    return output;
-  };
-
+  
   useEffect(() => {
     Promise.all([apiCalls.getEpisodes(), apiCalls.getCharacters()]).then(
       (calls) => {
@@ -141,12 +58,98 @@ export default function CharactersScreen() {
         setCharacters(calls[1]);
         setEpisodes(calls[0]);
       }
-    );
-  }, []);
+      );
+    }, []);
+    
+    useEffect(() => {
+    const filterCharacters = () => {
+      let output = characters;
+      if (currentStyle) {
+        output = output.filter(
+          (character) => character.hairColor === currentStyle
+        );
+      }
+  
+      if (age) {
+        output = output.filter((character) => {
+          if (!character.age) {
+            return false;
+          }
+          let charAge = character.age
+            .split("")
+            .filter((x) => x !== "s")
+            .join("")
+            .split("-")
+            .filter((x) => !isNaN(x));
+  
+          if (charAge.length > 1) {
+            if (
+              Number(charAge[0]) > Number(age) ||
+              Number(charAge[1]) < Number(age)
+            ) {
+              return false;
+            } else {
+              return true;
+            }
+          }
+          return Number(charAge[0]) === Number(age);
+        });
+      }
+      if (actor) {
+        output = output.filter((character) => {
+          return character.voicedBy === actor;
+        });
+      }
+  
+      if (occupation) {
+        output = output.filter((character) => {
+          return character.occupation === occupation;
+        });
+      }
+  
+      if (name) {
+        output = output.filter((character) => {
+          let chars = character.name.toLowerCase().split("")
+          let inputName = name.toLowerCase().split("")
+          let filter = true;
+          inputName.forEach((i) => {
+              if (!chars.includes(i) ) {
+                filter = false;
+              }
+            });
+          return filter;
+        });
+      }
+  
+      if (currentEpisode) {
+        output = output.filter((character) => {
+          if (!character.firstEpisode) {
+            return false;
+          }
+  
+          return (
+            character.firstEpisode
+              .split("")
+              .filter((x) => x !== '"')
+              .join("") ===
+            currentEpisode
+              .split('" ')
+              .filter((x) => !x.includes("("))
+              .filter((x) => !x.includes(")"))
+              .join("")
+              .split("")
+              .filter((x) => x !== `"`)
+              .join("")
+          );
+        });
+      }
+      return output;
+    };
 
-  useEffect(() => {
+
+
     setRenderedCharacters(filterCharacters());
-  }, [characters, currentStyle, name, currentEpisode, occupation, actor, age]);
+  }, [characters, currentStyle, name, currentEpisode, occupation, actor, age])
 
   return (
     <section className={"component-container"}>

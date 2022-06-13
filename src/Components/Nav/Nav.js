@@ -6,7 +6,7 @@ export default function Nav() {
   return (
     <nav>
       <NavLink className="burger" to="/">
-        <img src={require("../../assets/burger.png")} />
+        <img src={require("../../assets/burger.png")} alt="burger" />
       </NavLink>
       <div className="buttonContainer">
         <NavLink to="/">

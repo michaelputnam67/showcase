@@ -14,7 +14,7 @@ export default function Character({ character }) {
         <p>{character.voicedBy}</p>
         <p>{character.firstEpisode}</p>
       </div>
-      <img src={character.image}></img>
+      <img src={character.image} alt={character.name}></img>
     </section>
     </Link>
   );
