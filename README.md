@@ -6,7 +6,6 @@ Bob's Burger Auditorium is a one stop shop for every Bob's Burger the animated s
 
 [Check out the deployed app here]()
 
-[Original project spec can be found here](https://xd.adobe.com/view/9b29b218-d9e7-45e1-a65a-cb60005195d8-ce7a/)
 
 [Project planning documents can be found here](https://xd.adobe.com/view/39e8e747-c133-4067-80a9-44808f3b8027-6cbb/)
 
@@ -14,27 +13,8 @@ Bob's Burger Auditorium is a one stop shop for every Bob's Burger the animated s
 
 Home page:
 
-![home page](https://media.giphy.com/media/gIxvDMoJAIfpGEqMRL/giphy.gif)
 
 About screen:
-
-![About screen](https://media.giphy.com/media/kWFh3iPyYeJoZGKXWS/giphy.gif)
-
-Projects screen and adding a projects:
-
-![Projects Screen and adding a projects](https://media.giphy.com/media/Ywerw5wjGN9aOYQK5N/giphy.gif)
-
-Timer screen and taking a break:
-
-![Timer screen and taking a break](https://media.giphy.com/media/ZhTHbhwjDhxAhFF8dQ/giphy.gif)
-
-Stats screen:
-
-![Stats screen](https://media.giphy.com/media/2DmhnKhv3G9yekyfct/giphy.gif)
-
-Profile screen:
-
-![Profile Screen](https://media.giphy.com/media/wmm7jREApFfhLmjJQh/giphy.gif)
 
 ## Deploy Link:
 
