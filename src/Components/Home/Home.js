@@ -50,19 +50,17 @@ export default function Home() {
           <CharacterContainer characters={favoriteCharacters} />
         </div>
       ) : (
-        <div className="truck-link">
+        <Link to={"/characters"} className="truck-link">
           <h2>
             Hmmm, You don't seem to have any favorite characters. Lets pick some
             up!
           </h2>
           {truck ? (
-            <Link to={"/characters"}>
               <img src={truck.image} alt="truck" />
-            </Link>
           ) : (
             ""
           )}
-        </div>
+        </Link>
       )}
     </section>
   );

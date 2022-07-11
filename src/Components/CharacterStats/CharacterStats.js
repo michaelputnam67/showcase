@@ -35,55 +35,61 @@ export default function CharacterStats() {
     });
   }, [id]);
 
+  const renderFavoriteButton = (className, method, properties, message) => {
+    return (
+      <button
+        style={ favorited ? {
+          "background-color": '#fe895b'
+        } : undefined}
+        className={`${className} favorite-button`}
+        onClick={() => {
+          apiCalls[method](properties).then(() => {
+            favorited ? setFavorited(false) : setFavorited(true);
+          });
+        }}
+      >
+        {message}
+      </button>
+    );
+  };
+
   return (
     <div className="character-stats-container">
       <section className="character-info-container">
         <h1>{character ? character.name : "character"}</h1>
+        {favorited
+          ? renderFavoriteButton(
+              "remove-favorite",
+              "removeFavoriteCharacter",
+              { id: id },
+              "Remove From Favorites"
+            )
+          : renderFavoriteButton(
+              "favorite",
+              "postCharacter",
+              character,
+              "Favorite This Character"
+            )}
         <div className="image-container">
           <img src={character.image} alt={character.name} />
         </div>
         <div className="character-info-container-1">
           <ul>
-            <li>{character && character.gender}</li>
-            <li>{character.occupation}</li>
-            <li>{character.hairColor}</li>
-            <li>{character.firstEpisode}</li>
-            <li>{character.voicedBy}</li>
-          </ul>
-        </div>
-        <div className="character-info-container-2">
-          <ul>
+            {character.occupation && <li>{character.occupation}</li>}
             <li>
-              <a href={character.wikiUrl}>{`${character.name} Wiki Page`}</a>
-              {favorited ? (
-                <button
-                  className='remove-favorite'
-                  onClick={() =>
-                    apiCalls.removeFavoriteCharacter({ id: id }).then((res) => {
-                      if (Number(res.id) === Number(id)) {
-                        setFavorited(false);
-                      }
-                    })
-                  }
-                >
-                  Remove from Favorites
-                </button>
-              ) : (
-                <button 
-                  className="favorite"
-                  onClick={() =>
-                    apiCalls.postCharacter(character).then((res) => {
-                      if (res.id === Number(id)) {
-                        return setFavorited(true);
-                      } else {
-                        return alert(res);
-                      }
-                    })
-                  }
-                >
-                  Favorite This Character
-                </button>
-              )}
+              <span>hair color,</span> {character.hairColor}
+            </li>
+            <li>
+              <span>first episode,</span> {character.firstEpisode}
+            </li>
+            <li>
+              <span>voiced by,</span> {character.voicedBy}
+            </li>
+            <li>
+              <a
+                className="wiki-link"
+                href={character.wikiUrl}
+              >{`${character.name}'s Wiki Page`}</a>
             </li>
           </ul>
         </div>
