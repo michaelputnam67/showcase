@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 export default function Home() {
   const [favoriteCharacters, setfavoriteCharacters] = useState([]);
   const [truck, setTruck] = useState();
-
   const [burgerOTD, setBurgerOTD] = useState("");
 
   useEffect(() => {
@@ -50,19 +49,17 @@ export default function Home() {
           <CharacterContainer characters={favoriteCharacters} />
         </div>
       ) : (
-        <div className="truck-link">
+        <Link to={"/characters"} className="truck-link">
           <h2>
             Hmmm, You don't seem to have any favorite characters. Lets pick some
             up!
           </h2>
           {truck ? (
-            <Link to={"/characters"}>
               <img src={truck.image} alt="truck" />
-            </Link>
           ) : (
             ""
           )}
-        </div>
+        </Link>
       )}
     </section>
   );

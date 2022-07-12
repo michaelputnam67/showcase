@@ -2,3 +2,14 @@
 	display: grid;
 	grid-template-columns: repeat(12, 1fr)
 }
+
+@mixin hover() {
+	transform: scale(1.01, 1.01)
+}
+
+$primary: #fe895b;
+$primaryAnalogous1: #FEB15B;
+$primaryAnalogous2: #fe605b;
+$primaryMono: #e59c80;
+$primaryComplementary: #5be8fe;
+$white: #ffff;

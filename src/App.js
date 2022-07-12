@@ -1,21 +1,12 @@
 import "./app-styles/App.scss";
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import { Routes, Route } from "react-router-dom";
 import Nav from "./Components/Nav/Nav";
 import Home from "./Components/Home/Home";
 import CharactersScreen from "./Components/CharactersScreen/CharactersScreen";
 import CharacterStats from "./Components/CharacterStats/CharacterStats";
-import apiCalls from './apiCalls'
-
 
 function App() {
-   const [background, setBackground] = useState('')
-  
-  useEffect(() => {
-    apiCalls.getStore().then(res => setBackground(res.image))
-  }, [])
-
-  console.log(background)
   return (
     <main>
       <Nav />
