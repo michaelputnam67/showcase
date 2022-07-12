@@ -8,7 +8,7 @@ describe("CharactersScreen.cy.js", () => {
       fixture: "Episodes",
     });
     cy.intercept("GET", "https://showcase-api-bobs-burgers.herokuapp.com/api/v1/characters", {fixture: "FavoriteCharacters" })
-    cy.visit("http://localhost:3000");
+    cy.visit("http://localhost:3000/showcase");
     cy.get(".characters-button").click();
   });
   it("As a user I should be able navigate to a characters screen and see a list of characters ", () => {
