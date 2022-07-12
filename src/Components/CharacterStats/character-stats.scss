@@ -1,3 +1,6 @@
+@import '../../app-styles/mixins.scss';
+
+
 .character-stats-container {
   margin-top: 10vh;
   grid-column: 2 / span 10;
@@ -15,12 +18,19 @@
       grid-row: 6 / span 1;
       border-radius: 5px;
       box-shadow: 2px 2px 5px;
-      background-color: #FEB15B;
       font-size: 20pt;
       font-weight: bolder;
     }
+    .remove-favorite {
+      background-color: $primaryComplementary;
+    }
+    .favorite {
+      background-color: $primaryMono;
+    }
     .favorite-button:hover {
-      background-color: #fe895b;
+      background-color: $primaryComplementary;
+      cursor: pointer;
+      transform: scale(1.005, 1.005)
     }
     .character-info-container-1 {
       grid-column: 5 / span 2;
@@ -36,15 +46,22 @@
           font-weight: bolder;
           .wiki-link {
             place-self: center;
+            background-color: $white;
+            height: 2em;
+            width: 5em;
             margin-top: 20px;
             border: solid 1px black;
+            box-shadow: 1px 1px 1px;
             border-radius: 5px;
             font-size: 12pt;
             font-weight: normal;
-          }   
+          }
+          .wiki-link:hover {
+            background-color: $primaryComplementary;
+          }
         }
         span {
-          font-weight: lighter;
+          font-weight: 50;
           font-size: 12pt;
         }
         padding: 0;
@@ -64,7 +81,7 @@
         max-height: 401;
         max-width: 180;
         place-self: center;
-        border-radius: 300px;
+        border-radius: 10px;
         box-shadow: 2px 2px 2px 2px grey;
       }
 

@@ -38,9 +38,9 @@ export default function CharacterStats() {
   const renderFavoriteButton = (className, method, properties, message) => {
     return (
       <button
-        style={ favorited ? {
-          "background-color": '#fe895b'
-        } : undefined}
+        // style={ favorited ? {
+        //   "background-color": '#fe895b'
+        // } : undefined}
         className={`${className} favorite-button`}
         onClick={() => {
           apiCalls[method](properties).then(() => {
@@ -75,12 +75,12 @@ export default function CharacterStats() {
         </div>
         <div className="character-info-container-1">
           <ul>
-            {character.occupation && <li>{character.occupation}</li>}
+            {character.occupation && <li><span>occupation,</span> {character.occupation}</li>}
             <li>
               <span>hair color,</span> {character.hairColor}
             </li>
             <li>
-              <span>first episode,</span> {character.firstEpisode}
+              <span>first appeared in,</span> {character.firstEpisode}
             </li>
             <li>
               <span>voiced by,</span> {character.voicedBy}
