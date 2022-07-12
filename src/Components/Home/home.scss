@@ -1,5 +1,72 @@
+@import '../../app-styles/mixins.scss';
+
+
+
 .home {
-	margin-top: 10vh;
-	width: 100%;
-	grid-column: 2 / span 10;
+	background-color: $white;
+	height: 100vh;
+  margin-top: 10vh;
+  width: 100%;
+  grid-column: 2 / span 10;
+  display: grid;
+	.truck-link {
+		max-height: 400px;
+		max-width: 800px;
+		display: flex;
+		flex-direction: column;
+		border-radius: 20px;
+		place-self: center;
+		box-shadow: 3px 3px 5px;
+		img {
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+		}
+		h2 {
+			font-size: 15pt;
+		}
+	}
+  .favorites-container {
+    place-self: center;
+		h2 {
+			font-size: 25pt
+		}
+  }
+  .dashboard-title {
+    height: 1em;
+    place-self: center;
+    font-size: xx-large;
+  }
+  .burger-of-the-day {
+    max-width: 80%;
+    place-self: center;
+    border-radius: 10px;
+    display: inline-flex;
+    flex-direction: column;
+    h2 {
+      font-weight: lighter;
+      font-size: 20pt;
+    }
+    .price {
+      font-size: 25pt;
+      font-weight: normal;
+    }
+    .burger-name {
+      font-size: 25pt;
+      font-weight: bold;
+    }
+    .burger-stats {
+      text-align: right;
+      margin-bottom: 4px;
+      margin-right: 4px;
+    }
+
+    box-shadow: 3px 3px 10px;
+  }
+}
+
+.truck-link:hover {
+	@include hover;
+	box-shadow: 4px 4px 7px rgb(88, 88, 88);
+
+    background-color: $primaryComplementary
 }

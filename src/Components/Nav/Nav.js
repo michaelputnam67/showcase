@@ -1,12 +1,14 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import LogoImage from '../../assets/burger.png'
+import apiCalls from '../../apiCalls'
 import "./nav.scss";
 
 export default function Nav() {
   return (
     <nav>
       <NavLink className="burger" to="/">
-        <img src={require("../../assets/burger.png")} alt="burger" />
+        <img src={LogoImage} alt="burger" />
       </NavLink>
       <div className="buttonContainer">
         <NavLink to="/">

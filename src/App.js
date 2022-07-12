@@ -1,14 +1,12 @@
 import "./app-styles/App.scss";
+import React from 'react'
 import { Routes, Route } from "react-router-dom";
-import React from 'react';
-import Nav from "./components/Nav/Nav";
-import Home from "./components/Home/Home";
-import CharactersScreen from "./components/CharactersScreen/CharactersScreen";
-import CharacterStats from "./components/CharacterStats/CharacterStats";
+import Nav from "./Components/Nav/Nav";
+import Home from "./Components/Home/Home";
+import CharactersScreen from "./Components/CharactersScreen/CharactersScreen";
+import CharacterStats from "./Components/CharacterStats/CharacterStats";
 
 function App() {
-  
-
   return (
     <main>
       <Nav />

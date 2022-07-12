@@ -1,7 +1,8 @@
-@import './mixins.scss';
+@import "./mixins.scss";
 
 main {
-	width: 100%;
-	height: 100vh;
-	@include gridSetup
+  background-image: url("../assets/bobs-burger-storefront.png");
+	background-size: cover;
+  width: 100%;
+  @include gridSetup;
 }

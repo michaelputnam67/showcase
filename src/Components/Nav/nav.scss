@@ -1,7 +1,7 @@
 @import "../../app-styles/mixins.scss";
 
 nav {
-  background-color: #FEB15B; 
+  background-color: $primaryAnalogous1; 
   position: fixed;
   z-index: 100;
   @include gridSetup;
@@ -13,8 +13,13 @@ nav {
     grid-column-start: 2;
     place-self: center;
     img {
+      border-radius: 50px;
       height: 5em;
       width: 5em;
+      box-shadow: 0px 0px 10px $primaryAnalogous2;
+    }
+    img:hover {
+      transform: scale(1.03, 1.03)
     }
   }
   .buttonContainer {
@@ -24,8 +29,17 @@ nav {
     justify-content: space-evenly;
     align-items: center;
     button {
-      width: 6em;
-      height: 2em;
+      cursor: pointer;
+      background-color: $white;
+      font-size: 20pt;
+      min-width: 5.7em;
+      border-radius: 5px;
+      border: none;
+      box-shadow: 0px 0px 10px $primaryAnalogous2;
+    }
+    button:hover {
+      background-color: $primaryComplementary;
+      transform: scale(1.01, 1.01)
     }
   }
 }
