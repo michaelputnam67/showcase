@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import LogoImage from '../../assets/burger.png'
-import apiCalls from '../../apiCalls'
 import "./nav.scss";
 
 export default function Nav() {
