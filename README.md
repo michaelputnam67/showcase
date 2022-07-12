@@ -2,7 +2,7 @@
 
 ## Overview:
 
-Bob's Burger Auditorium is a one stop shop for every Bob's Burger the animated sitcoms vast roster of characters. Users can view every Bob's burger character by a variety of methods, view more details about their character and add the viewed character to a list of favorite characters that will display on the homepage. The user can also go back to the viewed character and remove them from their saved list. 
+Bob's Burgers Auditorium is a one-stop shop for every Bob's Burgers, the animated sitcom's vast roster of characters. Users can filter through the entire roster of Bob's Burgers characters by various methods, view more details about their background, and add them to a list of favorite characters on the homepage. The user can also return to the character info page and remove them from their saved list. 
 
 
 

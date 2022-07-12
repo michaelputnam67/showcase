@@ -1,10 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useReducer } from "react";
 import Form from "../Form/Form";
 import CharacterContainer from "../CharacterContainer/CharacterContainer";
 import "./characters-screen.scss";
 import apiCalls from "../../apiCalls";
 
+const reducer = (state, action) => {
+   switch(action.type) {
+    case 'name': () => {
+      
+    }
+    default:
+      return
+  }
+}
+
+const initialState = {
+  name: '',
+  occupation: '',
+  occupations: '',
+  episodes: [],
+  age: null
+}
+
 export default function CharactersScreen() {
+  const [state, dispatch] = useReducer(reducer, initialState)
   const [characters, setCharacters] = useState([]);
   const [renderedCharacters, setRenderedCharacters] = useState([]);
   const [hairColors, setHairColors] = useState([]);
@@ -155,6 +174,8 @@ export default function CharactersScreen() {
     <section className={"component-container"}>
       <h1>Characters</h1>
       <Form
+        state={state}
+        dispatch={dispatch}
         setAge={setAge}
         age={age}
         actor={actor}
