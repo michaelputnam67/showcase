@@ -2,8 +2,6 @@ import "./form.scss";
 import React from "react";
 
 export default function Form({
-  state,
-  dispatch,
   age, 
   setAge,
   actor,

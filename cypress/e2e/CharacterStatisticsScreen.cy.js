@@ -19,14 +19,14 @@ describe("Character Statistics Screen", () => {
       "https://showcase-api-bobs-burgers.herokuapp.com/api/v1/characters",
       { fixture: "FavoriteCharacters" }
     );
-    cy.visit("http://localhost:3000");
+    cy.visit("http://localhost:3000/showcase");
     cy.get(".characters-button").click().get(".character").eq(0).click();
   });
 
   it("As a user I should be able to favorite a character and information about them", () => {
     cy.get(".character-info-container-1")
       .get("ul li:first")
-      .should("have.text", "Female");
+      .should("have.text", "occupation, Student at Wagstaff School");
   });
 
   it("As a user I should be able to favorite a character and see this player on my home page.", () => {
@@ -36,8 +36,7 @@ describe("Character Statistics Screen", () => {
       { fixture: "Single-Character-Dottie" }
     );
 
-    cy.get(".character-info-container-2")
-      .get(".favorite")
+    cy.get(".favorite")
       .click()
       .get(".burger")
       .click()
