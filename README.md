@@ -30,7 +30,7 @@ Bob's Burgers API/Backend: https://showcase-api-bobs-burgers.herokuapp.com
 
 - Showcase the skills I have developed over the course of my time at Turing.
 - Build a basic react app that utilizes two apis one previous existing and one built for myself. 
-- 
+- Successfully utilize CircleCi with Cypress testing
 
 ## Technologies:
 
@@ -43,6 +43,7 @@ Bob's Burgers API/Backend: https://showcase-api-bobs-burgers.herokuapp.com
 - React Router
 - Restful APIs
 - Adobe XD
+- Circle CI
 
 
 ## Future Additions:
